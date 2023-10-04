@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openCMD 0.0.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2023-10-04 21:52+0700\n"
-"PO-Revision-Date: 2023-10-04 21:57+0700\n"
+"POT-Creation-Date: 2023-10-04 23:16+0700\n"
+"PO-Revision-Date: 2023-10-04 23:17+0700\n"
 "Last-Translator: Danstiv <dan7900@mail.ru>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -19,12 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information found in Add-ons Manager.
-#: addon\globalPlugins\openCMD\__init__.py:20 buildVars.py:23
+#: addon\globalPlugins\openCMD\__init__.py:21
 msgid "Open CMD"
 msgstr "Открыть CMD"
+
+#: addon\globalPlugins\openCMD\__init__.py:27
+msgid "Failed to open cmd."
+msgstr "Не удалось открыть cmd."
 
 #: buildVars.py:27
 msgid "Allows to open cmd (nvda+ctrl+tab used by default)."

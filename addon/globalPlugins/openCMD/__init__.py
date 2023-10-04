@@ -3,6 +3,7 @@ import subprocess
 
 import addonHandler
 import globalPluginHandler
+import ui
 from scriptHandler import script
 
 addonHandler.initTranslation()
@@ -23,7 +24,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
     def script_open_cmd(self, gesture):
         out = ctypes.c_void_p()
         if not kernel32.Wow64DisableWow64FsRedirection(ctypes.byref(out)):
-            message('Failed.')
+            ui.message(_('Failed to open cmd.'))
             return
         try:
             subprocess.Popen('cmd.exe /s /k pushd "%userprofile%"')

@@ -22,11 +22,4 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         gesture='kb:nvda+control+tab'
     )
     def script_open_cmd(self, gesture):
-        out = ctypes.c_void_p()
-        if not kernel32.Wow64DisableWow64FsRedirection(ctypes.byref(out)):
-            ui.message(_('Failed to open cmd.'))
-            return
-        try:
-            subprocess.Popen('cmd.exe /s /k pushd "%userprofile%"')
-        finally:
-            kernel32.Wow64RevertWow64FsRedirection(ctypes.byref(out))
+        subprocess.Popen('cmd.exe /s /k pushd "%userprofile%"')
